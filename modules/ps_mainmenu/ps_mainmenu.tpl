@@ -1,4 +1,7 @@
+{assign var=_counter value=0}
+{function name="menu" nodes=[] depth=0 parent=null}
 <div class="dropdown">
+    {foreach from=$nodes item=node}
     <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" data-hover="dropdown">
         Dropdown <span class="caret"></span>
     </button>
@@ -23,7 +26,9 @@
         <li><a href="#">Something else here</a></li>
         <li><a href="#">Separated link</a></li>
     </ul>
+    {/foreach}
 </div>
+{/function}
 <!--
 {assign var=_counter value=0}
 {function name="menu" nodes=[] depth=0 parent=null}
